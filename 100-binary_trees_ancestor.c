@@ -26,7 +26,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 }
 
 /**
- * _binary_trees_ancestor_recursive - Helper function to find the lowest
+ * _binary_trees_ancestor - Helper function to find the lowest
  * common ancestor of two nodes recursively.
  *
  * @first: A pointer to the first node
