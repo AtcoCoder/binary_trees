@@ -7,7 +7,7 @@
  * @second: A pointer to the second node
  *
  * Return: A pointer to the lowest common ancestor node
- *		   of the two given nodes.
+ * of the two given nodes.
  */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 									 const binary_tree_t *second)
@@ -87,4 +87,3 @@ size_t _binary_tree_depth(const binary_tree_t *tree)
 	}
 	return (_binary_tree_depth(tree->parent) + 1);
 }
-
