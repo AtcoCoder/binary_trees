@@ -28,9 +28,14 @@ int main(void)
     root->left->right = binary_tree_node(root->left, 56);
     root->right->left = binary_tree_node(root->right, 256);
     root->right->right = binary_tree_node(root->right, 512);
+    root->right->right->left = binary_tree_node(root->right->right, 450);
+
 
     binary_tree_print(root);
     binary_tree_levelorder(root, &print_num);
+	printf("\n-------------------\n");
+	binary_tree_print(root->left);
+	binary_tree_levelorder(root->left, &print_num);
     binary_tree_delete(root);
     return (0);
 }

@@ -46,8 +46,12 @@ void push(binary_tree_t **queue, int *rear, binary_tree_t *tree)
  */
 binary_tree_t *pop(binary_tree_t **queue, int *front)
 {
+	binary_tree_t *node;
+
+	node = queue[*front];
+	queue[*front] = NULL;
 	(*front)++;
-	return (queue[*front - 1]);
+	return (node);
 }
 
 /**
