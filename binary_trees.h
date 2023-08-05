@@ -2,6 +2,7 @@
 #define BINARY_TREE_H
 
 #include <stddef.h>
+#define MAX_Q_SIZE 500
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -23,6 +24,12 @@ typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
+
+/* Function prototypes for the queue functions*/
+binary_tree_t **create_queue(int *front, int *rear);
+void push(binary_tree_t **queue, int *rear, binary_tree_t *tree);
+binary_tree_t *pop(binary_tree_t **queue, int *front);
+
 
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -56,5 +63,5 @@ binary_tree_t *_binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second,
 		const binary_tree_t *original_first,
 		const binary_tree_t *original_second);
-
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 #endif
