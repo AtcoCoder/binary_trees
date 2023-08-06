@@ -12,16 +12,16 @@
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	size_t level, height;
+	size_t level, max_level;
 
 	if (tree == NULL || func == NULL)
 	{
 		return;
 	}
 
-	height = _binary_tree_height(tree);
+	max_level = _binary_tree_height(tree) + 1;
 
-	for (level = 1; level <= height; level++)
+	for (level = 1; level <= max_level; level++)
 	{
 		_binary_tree_levelorder(tree, func, level);
 	}
