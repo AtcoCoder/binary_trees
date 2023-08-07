@@ -33,7 +33,8 @@ int binary_tree_is_complete(const binary_tree_t *tree)
  *
  * Return: 1 is tree is complete, otherwise 0.
  */
-int _binary_tree_is_complete(const binary_tree_t *tree, size_t index, size_t size)
+int _binary_tree_is_complete(const binary_tree_t *tree, size_t index,
+		size_t size)
 {
 	if (tree == NULL)
 	{
